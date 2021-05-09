@@ -46,6 +46,9 @@ const App = () => {
           </div>
         </div>
       )}
+      {results.Error && (
+        <h2>{results.Error} Please try a new search.</h2>
+      )}
     </div>
   )
 }
