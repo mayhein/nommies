@@ -183,31 +183,31 @@ html {
 }
 
 .search__container {
-      padding-top: 64px;
-      text-align: center;
+  padding-top: 64px;
+  text-align: center;
 }
 
 .search__title {
-      font-size: 22px;
-      font-weight: 900;
-      text-align: center;
-      padding-bottom: 2%;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 2%;
 }
 
 .search__input {
-      width: 430px;
-      padding: 12px 24px;
-      background-color: transparent;
-      transition: transform 250ms ease-in-out;
-      font-size: 14px;
-      line-height: 18px;
-      color: #575756;
-      background-color: transparent;
-      border-radius: 50px;
-      border: 1px solid #575756;
-      transition: all 250ms ease-in-out;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
+  width: 430px;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  color: #575756;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .search__input:hover,
@@ -221,3 +221,18 @@ html {
 }
 
 
+.search__results__container {
+  text-align: center;
+  padding: 2% 0;
+  text-align: center;
+}
+
+.search__results__title {
+  padding-bottom: 2%;
+  text-align: center;
+  font-weight:bold
+}
+
+.movie__name {
+  display: inline;
+}

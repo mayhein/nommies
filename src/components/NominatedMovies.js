@@ -22,7 +22,6 @@ function NominatedMovies({ nominatedMovies, removeNomination }) {
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            loop={true}
             speed={500}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
