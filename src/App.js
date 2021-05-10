@@ -5,7 +5,7 @@ import NominatedMovies from './components/NominatedMovies';
 import Search from './components/Search';
 import { fetchNominatedMovies } from './redux/app-redux';
 
-const App = ({ getNominatedMovies, nominatedMovies, nominateMovie, removeNomination }) => {
+const App = ({ getNominatedMovies, nominatedMovies }) => {
 
   useEffect(() => {
     getNominatedMovies()

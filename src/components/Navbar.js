@@ -11,7 +11,7 @@ function Navbar() {
             <div className="navbar-logo">The Shoppies</div>
             <div className="nav-btn">
               <div className="btn-link">
-                <Button buttonStyle="btn--outline">Click to view the source code on GitHub</Button>
+                <Button buttonStyle="btn--outline" ><a href="https://github.com/mayhein/shoppies" target="_blank">Click to view the source code on GitHub</a></Button>
               </div>
             </div>
           </div>

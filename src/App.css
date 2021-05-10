@@ -9,6 +9,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar {
   height: 80px;
   background-color: #141414;
