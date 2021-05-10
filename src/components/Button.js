@@ -3,9 +3,9 @@ import '../App.css'
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--remove']
 
-const SIZES = ['btn--medium', 'btn--large', 'btn--mobile', ]
+const SIZES = ['btn--medium']
 
-const COLORS = ['primary', 'blue', 'red', 'green', 'dark-blue', 'pink']
+const COLORS = ['primary', 'red', 'green']
 
 export const Button = ({
   children,

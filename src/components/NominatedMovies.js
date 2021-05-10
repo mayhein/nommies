@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function NominatedMovies({ nominatedMovies, removeNomination }) {
   return (
     <div className="darkBackground">
-      <h2 className="sectionTitle">Nominated Movies</h2>
+      <h2 className="nominations-title">Nominated Movies</h2>
       <section className="nominations">
           <Swiper
             spaceBetween={10}

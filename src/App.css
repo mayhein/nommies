@@ -1,3 +1,7 @@
+:root {
+  --primary: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,24 +84,6 @@
   font-size: 18px;
 }
 
-.btn--large {
-  padding: 12px 26px;
-  font-size: 20px;
-}
-
-.btn--mobile {
-  text-align: center;
-  border-radius: 4px;
-  width: 80%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  background-color: transparent;
-  color: #fff;
-  padding: 14px 20px;
-  border: 1px solid #fff;
-  transition: all 0.3s ease-out;
-}
-
 .btn--remove {
   background-color: var(--primary);
   color: #242424;
@@ -128,42 +114,6 @@
   width: 100%;
 }
 
-.blue {
-  background-color: #a29bfe;
-  color: #fff;
-  border: none;
-}
-
-.dark-blue {
-  background-color: #1c2237;
-  color: #fff;
-  border: none;
-}
-
-.red {
-  background-color: #f00946;
-  color: #fff;
-  border: none;
-}
-
-.pink {
-  background-color: #fd79a8;
-  color: #fff;
-  border: none;
-}
-
-.primary {
-  background-color: #242424;
-  color: #fff;
-  border: none;
-}
-
-.primary:hover {
-  background-color: #fff;
-  color: #242424;
-  border: none;
-}
-
 .green {
   background: #25ce4a;
   color: #fff;
@@ -185,7 +135,7 @@ html {
   padding-left: 20px;
 }
 
-.sectionTitle {
+.nominations-title {
   padding-top: 3%;
   color: #e5e5e5;
   z-index: 1;
@@ -204,4 +154,17 @@ html {
 
 .darkBackground {
   background-color: #141414;
+}
+
+.search-bar {
+  padding-top: 3%;
+  color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-weight: 500;
 }
