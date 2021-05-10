@@ -24,6 +24,7 @@ const App = ({ getNominatedMovies, nominatedMovies, nominateMovie, removeNominat
 
   return (
     <div>
+      <button><a href='https://github.com/mayhein/shoppies' target='_blank' rel="noreferrer">View Source Code on GitHub @ mayhein/shoppies</a></button>
       <h1>The Shoppies</h1>
       {nominatedMovies && (
         <div>
