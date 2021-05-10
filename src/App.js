@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchMoviesBySearch } from './api/movies'
+import Navbar from './components/Navbar';
+import NominatedMovies from './components/NominatedMovies';
 import { fetchNominatedMovies, nominateMovieThunk, removeNominationThunk } from './redux/app-redux';
 
 const App = ({ getNominatedMovies, nominatedMovies, nominateMovie, removeNomination }) => {
@@ -24,20 +26,22 @@ const App = ({ getNominatedMovies, nominatedMovies, nominateMovie, removeNominat
 
   return (
     <div>
-      <button><a href='https://github.com/mayhein/shoppies' target='_blank' rel="noreferrer">View Source Code on GitHub @ mayhein/shoppies</a></button>
-      <h1>The Shoppies</h1>
+      {/* <button><a href='https://github.com/mayhein/shoppies' target='_blank' rel="noreferrer">View Source Code on GitHub @ mayhein/shoppies</a></button>
+      <h1>The Shoppies</h1> */}
+      <Navbar />
       {nominatedMovies && (
-        <div>
-          <h1>Nominated Movies</h1>
-          {nominatedMovies.map((movie) => {
-            return (
-              <div key={movie.imdbID}>
-                <p>{movie.Title} ({movie.Year})</p>
-                <button onClick={() => removeNomination(movie.imdbID)}>Remove Nomination</button>
-              </div>
-            )
-          })}
-        </div>
+        < NominatedMovies />
+        // <div>
+        //   <h1>Nominated Movies</h1>
+        //   {nominatedMovies.map((movie) => {
+        //     return (
+        //       <div key={movie.imdbID}>
+        //         <p>{movie.Title} ({movie.Year})</p>
+        //         <button onClick={() => removeNomination(movie.imdbID)}>Remove Nomination</button>
+        //       </div>
+        //     )
+        //   })}
+        // </div>
       )}
       <h1>Movie Title</h1>
       <input
