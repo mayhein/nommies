@@ -1,14 +1,14 @@
 # Shoppies
 
-## 🍿 About 🍿
+## 🍿 About 
 
 A progressive web application that allows users to search movies and nominate up to five movies for the Shoppies award. 
 
-## 🔥 Tech Stack 🔥 
+## 🔥 Tech Stack 
 
 React / Redux / NodeJS / Firebase 
 
-## 🚀 Deployment 🚀
+## 🚀 Deployment 
 
 http://shoppiesbymayh.herokuapp.com/
 
