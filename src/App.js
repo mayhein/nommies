@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { fetchMoviesBySearch } from './api/movies'
+import { fetchNominatedMovies, nominateMovie } from './redux/app-redux';
 
-const App = () => {
+const App = ({ getNominatedMovies, nominatedMovies }) => {
 
   const [query, setQuery] = useState('');
   const [lastQuery, setLastQuery] = useState('');
@@ -19,8 +20,17 @@ const App = () => {
     }
   }
 
+  useEffect(() => {
+    getNominatedMovies()
+  }, [getNominatedMovies]);
+
   return (
     <div>
+      {nominatedMovies && (
+        <div>
+          <h2>Nominated Movies</h2>
+        </div>
+      )}
       <h1>Movie Title</h1>
       <input
         type="text"
@@ -38,7 +48,7 @@ const App = () => {
             return (
               <div key={result.imdbID}>
                 <p>{result.Title} ({result.Year})</p>
-                <button>Nominate</button>
+                <button onClick={() => nominateMovie(result)}>Nominate</button>
                 <img src={result.Poster} alt={result.Title} />
               </div>
             )
@@ -53,4 +63,16 @@ const App = () => {
   )
 }
 
-export default App;
+const mapState = (state) => {
+  return {
+    nominatedMovies: state,
+  };
+};
+
+const mapDispatch = (dispatch) => {
+  return {
+    getNominatedMovies: () => dispatch(fetchNominatedMovies()),
+  };
+};
+
+export default connect(mapState, mapDispatch)(App);
