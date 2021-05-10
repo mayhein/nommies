@@ -29,6 +29,13 @@ const App = ({ getNominatedMovies, nominatedMovies }) => {
       {nominatedMovies && (
         <div>
           <h2>Nominated Movies</h2>
+          {nominatedMovies.map((movie) => {
+            return (
+              <div key={movie.imdbID}>
+                <p>{movie.Title}</p>
+              </div>
+            )
+          })}
         </div>
       )}
       <h1>Movie Title</h1>
@@ -48,7 +55,11 @@ const App = ({ getNominatedMovies, nominatedMovies }) => {
             return (
               <div key={result.imdbID}>
                 <p>{result.Title} ({result.Year})</p>
-                <button onClick={() => nominateMovie(result)}>Nominate</button>
+                {nominatedMovies.filter((movie) => movie.imdbID === result.imdbID ).length ? (
+                  <button onClick={() => nominateMovie(result)}>Remove Nomination</button>
+                ) : (
+                  <button onClick={() => nominateMovie(result)}>Nominate</button>
+                )}
                 <img src={result.Poster} alt={result.Title} />
               </div>
             )

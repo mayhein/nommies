@@ -21,8 +21,29 @@ export const fetchNominatedMovies = () => {
 }
 
 export const nominateMovie = async (movieData) => {
+  if (addLocalStorage()) {
     await db.collection('nominations').doc(movieData.imdbID).set(movieData);
+  }
 };
+
+export const addLocalStorage = () => {
+  let data = JSON.parse(window.localStorage.getItem('nominations'))
+  console.log("DATA:", data)
+  if (data) {
+    if (data < 5) {
+      data++;
+      window.localStorage.setItem('nominations', JSON.stringify(data))
+      return true;
+    } else {
+      alert("You've already nominated five movies.")
+      return false;
+    }
+  } else {
+    data = 1
+    window.localStorage.setItem('nominations', JSON.stringify(data))
+    return true;
+  }
+}
 
 const initialState = [];
 
