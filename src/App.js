@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchMoviesBySearch } from './api/movies'
-import { fetchNominatedMovies, nominateMovie } from './redux/app-redux';
+import { fetchNominatedMovies, nominateMovieThunk, removeNominationThunk } from './redux/app-redux';
 
-const App = ({ getNominatedMovies, nominatedMovies }) => {
+const App = ({ getNominatedMovies, nominatedMovies, nominateMovie, removeNomination }) => {
 
   const [query, setQuery] = useState('');
   const [lastQuery, setLastQuery] = useState('');
@@ -12,9 +12,7 @@ const App = ({ getNominatedMovies, nominatedMovies }) => {
   const search = async (event) => {
     if(event.key === 'Enter') {
       const data = await fetchMoviesBySearch(query)
-      console.log("inside data:", data)
       setResults(data);
-      console.log("inside search:", results)
       setLastQuery(query);
       setQuery('');
     }
@@ -26,13 +24,15 @@ const App = ({ getNominatedMovies, nominatedMovies }) => {
 
   return (
     <div>
+      <h1>The Shoppies</h1>
       {nominatedMovies && (
         <div>
-          <h2>Nominated Movies</h2>
+          <h1>Nominated Movies</h1>
           {nominatedMovies.map((movie) => {
             return (
               <div key={movie.imdbID}>
-                <p>{movie.Title}</p>
+                <p>{movie.Title} ({movie.Year})</p>
+                <button onClick={() => removeNomination(movie.imdbID)}>Remove Nomination</button>
               </div>
             )
           })}
@@ -56,7 +56,7 @@ const App = ({ getNominatedMovies, nominatedMovies }) => {
               <div key={result.imdbID}>
                 <p>{result.Title} ({result.Year})</p>
                 {nominatedMovies.filter((movie) => movie.imdbID === result.imdbID ).length ? (
-                  <button onClick={() => nominateMovie(result)}>Remove Nomination</button>
+                  <button onClick={() => removeNomination(result.imdbID)}>Remove Nomination</button>
                 ) : (
                   <button onClick={() => nominateMovie(result)}>Nominate</button>
                 )}
@@ -83,6 +83,8 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => {
   return {
     getNominatedMovies: () => dispatch(fetchNominatedMovies()),
+    nominateMovie: (movie) => dispatch(nominateMovieThunk(movie)),
+    removeNomination: (imdbId) => dispatch(removeNominationThunk(imdbId))
   };
 };
 
