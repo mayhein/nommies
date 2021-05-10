@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import '../App.css'
 import { nominateMovieThunk, removeNominationThunk } from '../redux/app-redux';
@@ -22,11 +22,11 @@ function Search({ nominatedMovies, removeNomination, nominateMovie }) {
 
   return (
     <>
-      <div className="search-bar">
-        <h2>Search Movies</h2>
+      <div className="search__container">
+        <h2 className="search__title">Search Movies To Nominate For The Shoppies 2021</h2>
         <input
           type="text"
-          className="search"
+          className="search__input"
           placeholder="Search by movie title..."
           value={query}
           onChange={(event) => setQuery(event.target.value)}
