@@ -1,6 +1,10 @@
 # Shoppies
 
-## 🚀 Deployment 🚀
+## 🔥 Tech Stack 
+
+React / Redux / NodeJS / Firebase 
+
+## 🚀 Deployment 
 
 http://shoppiesbymayh.herokuapp.com/
 
