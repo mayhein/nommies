@@ -34,22 +34,25 @@ function Search({ nominatedMovies, removeNomination, nominateMovie }) {
         />
       </div>
       {results.Search && (
+
         <div className="search__results__container">
           <p className="search__results__title">Movie Results for "{lastQuery}"</p>
-          <ul>
-          {results.Search.map((result) => {
-            return (
-              <li key={result.imdbID}>
-                <p className="movie__name">{result.Title} ({result.Year})</p>
-                {nominatedMovies.filter((movie) => movie.imdbID === result.imdbID ).length ? (
-                  <button onClick={() => removeNomination(result.imdbID)}>Remove Nomination</button>
-                ) : (
-                  <button onClick={() => nominateMovie(result)}>Nominate</button>
-                )}
-              </li>
-            )
-          })}
-          </ul>
+          <div className="search__results__movies">
+            <ul>
+            {results.Search.map((result) => {
+              return (
+                <li key={result.imdbID}>
+                  <p className="movie__name">{result.Title} ({result.Year})</p>
+                  {nominatedMovies.filter((movie) => movie.imdbID === result.imdbID ).length ? (
+                    <Button buttonStyle="btn--remove" onClick={() => removeNomination(result.imdbID)}>Remove Nomination</Button>
+                  ) : (
+                    <Button buttonStyle="btn--add" onClick={() => nominateMovie(result)}>Nominate</Button>
+                  )}
+                </li>
+              )
+            })}
+            </ul>
+          </div>
         </div>
       )}
       {results.Error && (

@@ -95,7 +95,14 @@ a:hover {
 }
 
 .btn--remove {
-  background-color: var(--primary);
+  background-color: gray;
+  color: #242424;
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.btn--add {
+  background-color: lightgray;
   color: #242424;
   padding: 10px 10px;
   font-size: 12px;
@@ -111,6 +118,12 @@ a:hover {
 .btn--remove:hover {
   color: #fff;
   background-color: #f00946;
+  transition: all 0.2s ease-out;
+}
+
+.btn--add:hover {
+  color: #fff;
+  background-color: green;
   transition: all 0.2s ease-out;
 }
 
@@ -165,7 +178,7 @@ html {
 .darkBackground {
   background-color: #141414;
 }
-
+/*
 .search-bar {
   padding-top: 3%;
   color: #141414;
@@ -180,7 +193,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
 .search__container {
   padding-top: 64px;
@@ -222,9 +235,9 @@ html {
 
 
 .search__results__container {
+  justify-content: center;
   text-align: center;
   padding: 2% 0;
-  text-align: center;
 }
 
 .search__results__title {
@@ -235,4 +248,12 @@ html {
 
 .movie__name {
   display: inline;
+}
+
+.remove-button {
+  background-color: red;
+}
+
+.add-button {
+  background-color: aquamarine;
 }

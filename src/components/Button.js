@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--remove']
+const STYLES = ['btn--primary', 'btn--outline', 'btn--remove', 'btn--add']
 
 const SIZES = ['btn--medium']
 
