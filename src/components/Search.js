@@ -23,7 +23,7 @@ function Search({ nominatedMovies, removeNomination, nominateMovie }) {
   return (
     <>
       <div className="search__container">
-        <h2 className="search__title">Search Movies To Nominate For The Shoppies 2021</h2>
+        <h2 className="search__title">Search Movies To Nominate For The Nommies 2021</h2>
         <input
           type="text"
           className="search__input"

@@ -8,13 +8,13 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import 'swiper/swiper-bundle.css'
 
-// install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function NominatedMovies({ nominatedMovies, removeNomination }) {
   return (
-    <div className="darkBackground">
-      <h2 className="nominations-title">Nominated Movies</h2>
+    <div className="greyBackground">
+      {nominatedMovies.length &&
+      <h2 className="nominations-title">Nominated Movies</h2>}
       <section className="nominations">
           <Swiper
             spaceBetween={10}
