@@ -1,4 +1,4 @@
-# Nommies
+# 🍿 Nommies
 
 Nommies is a web application that allows users to search movies and nominate up to five movies for the Nommies awards. Users can also remove nominations.
 
