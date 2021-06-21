@@ -1,4 +1,4 @@
-# Shoppies
+# Nommies
 
 ## 🔥 Tech Stack 
 
@@ -6,7 +6,7 @@ React / Redux / NodeJS / Firebase
 
 ## 🚀 Deployment 
 
-http://shoppiesbymayh.herokuapp.com/
+http://nommiesbymayh.herokuapp.com/
 
 Built with ♡ by [May Hein](https://www.linkedin.com/in/mayhein/)
 
