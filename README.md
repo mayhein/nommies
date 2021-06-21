@@ -4,7 +4,7 @@ Nommies is a simple web application that allows users to search movies and nomin
 
 ## 🔥 Tech Stack 
 
-React / Redux / NodeJS / Firebase / Swiper.js
+React / Redux / NodeJS / Firebase
 
 ## 🚀 Deployment 
 
